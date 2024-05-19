@@ -32,7 +32,9 @@
 @layer components {
   .recipe {
     counter-reset: step;
-
+    @apply px-4;
+    @apply lg:px-0;
+    
     h3 {
       @apply flex;
       @apply items-center;
@@ -58,7 +60,7 @@
       @apply min-h-6;
     }
 
-    p + ol, ol + ol, li + li {
+    p + ol, ol + ol, ol li + li {
       @apply mt-6;
     }
 
@@ -75,24 +77,17 @@
       }
     }
 
-    p {
-      @apply inline;
-      @apply leading-8;
-    }
-
-    p + p {
-      @apply block;
-    }
-
     ul {
       @apply m-0;
-      @apply -ml-64;
+      @apply lg:-ml-64;
       @apply p-0;
-      @apply pr-2;
+      @apply lg:pr-2;
       @apply list-none;
-      @apply max-w-64;
-      @apply text-right;
+      @apply lg:max-w-64;
+      @apply lg:text-right;
       @apply leading-6;
+      @apply inline;
+      @apply lg:block;
 
       li {
         @apply font-sans;
@@ -101,6 +96,8 @@
         @apply m-0;
         @apply p-0;
         @apply leading-6;
+        @apply inline;
+        @apply lg:list-item;
 
         &:not(:last-of-type):after {
           content: ", ";
@@ -120,7 +117,9 @@
     }
 
     ul + p {
-      @apply -mt-6;
+      @apply lg:-mt-6;
+      @apply lg:block;
+      @apply inline;
     }
   }
 }
