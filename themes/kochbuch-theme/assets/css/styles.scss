@@ -1,0 +1,126 @@
+@import "node_modules/tailwindcss/base";
+@import "node_modules/tailwindcss/components";
+@import "node_modules/tailwindcss/utilities";
+
+@layer base {
+  h1, 
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+
+  h1 {
+    @apply text-7xl;
+    @apply mt-6;
+    @apply mb-4;
+  }
+  h2 { 
+    @apply text-3xl;
+    @apply mt-5;
+    @apply mb-3;
+  }
+  h3 { 
+    @apply text-2xl;
+    @apply mt-5;
+    @apply mb-3;
+  }
+}
+
+@layer components {
+  .recipe {
+    counter-reset: step;
+
+    h3 {
+      @apply flex;
+      @apply items-center;
+      @apply gap-1;
+
+      &::before {
+        content: '';
+        @apply flex-1;
+        @apply max-w-3;
+        @apply h-px;
+        @apply bg-black;
+      }
+
+      &::after {
+        content: '';
+        @apply flex-1;
+        @apply h-px;
+        @apply bg-black;
+      }
+    }
+
+    ol {
+      @apply min-h-6;
+    }
+
+    p + ol, ol + ol, li + li {
+      @apply mt-6;
+    }
+
+    ol li {
+      @apply indent-6;
+      counter-increment: step;
+
+      &:before {
+        @apply absolute;
+        @apply w-4;
+        @apply -ml-12;
+        @apply font-bold;
+        content: counter(step) ". ";
+      }
+    }
+
+    p {
+      @apply inline;
+      @apply leading-8;
+    }
+
+    p + p {
+      @apply block;
+    }
+
+    ul {
+      @apply m-0;
+      @apply -ml-64;
+      @apply p-0;
+      @apply pr-2;
+      @apply list-none;
+      @apply max-w-64;
+      @apply text-right;
+      @apply leading-6;
+
+      li {
+        @apply font-sans;
+        @apply font-bold;
+        @apply italic;
+        @apply m-0;
+        @apply p-0;
+        @apply leading-6;
+
+        &:not(:last-of-type):after {
+          content: ", ";
+        }
+
+        &:nth-last-of-type(2):after {
+          content: " und ";
+        }
+      }
+    }
+
+    p {
+      @apply m-0;
+      @apply mt-2;
+      @apply p-0;
+      @apply leading-6;
+    }
+
+    ul + p {
+      @apply -mt-6;
+    }
+  }
+}

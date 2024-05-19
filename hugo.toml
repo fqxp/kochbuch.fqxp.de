@@ -1,0 +1,4 @@
+baseURL = 'https://kochbuch.fqxp.de/'
+languageCode = 'de-de'
+title = 'Franks Kochbuch'
+theme = 'kochbuch-theme'
