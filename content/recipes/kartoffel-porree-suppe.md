@@ -4,7 +4,7 @@ category: Suppen
 tags: vegetarisch
 ---
 
-## Für die Suppe
+### Für die Suppe
 
 1.
 
@@ -53,7 +53,7 @@ dazugeben und unter Rühren kurz aufkochen. Mit
 
 abschmecken.
 
-## Für das Schnittlauchöl
+### Für das Schnittlauchöl
 
 6.
 
