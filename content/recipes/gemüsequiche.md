@@ -40,7 +40,7 @@ klein schneiden, in Olivenöl anbraten und mit
 
 würzen. Anschließend Gemüse über dem Teig verteilen.
 
-4.
+4. Anschließend
 
 - 3 Eier
 - 250g Crème fraîche
@@ -51,8 +51,6 @@ vermischen, mit
 
 würzen und und über der Gemüsemischung auf dem Teig verteilen.
 
-5.
-
-Bei 200 °C 20 Minuten backen, bis die Oberseite angebräunt ist.
+5. Bei 200 °C 20 Minuten backen, bis die Oberseite angebräunt ist.
 
 Lässt sich gut wieder aufwärmen oder auch kalt essen.

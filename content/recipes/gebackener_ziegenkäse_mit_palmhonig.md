@@ -11,9 +11,7 @@ tags: vegetarisch
 zu kleinen Talern formen. Anschließend die Taler aufs Backblech
 legen, ein wenig eindrücken, so dass eine Mulde ensteht.
 
-2.
-
-Ca.
+2. Ca.
 
 - jeweils 1 TL Palmhonig
 
@@ -29,6 +27,6 @@ würfeln und jeweils einige Würfel in die Mulden legen. Mit
 
 würzen.
 
-4.  Max. 3 Minuten bei backen.
+4.  Max. 3 Minuten bei 200° C backen.
 
 Dazu passt ein Rucolasalat und mit Zitronensaft beträufelte und gepfefferte Avocadoschnitze.
