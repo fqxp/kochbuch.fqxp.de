@@ -30,15 +30,34 @@
 }
 
 @layer components {
+  .ingredients {
+    ul {
+      @apply invisible;
+      @apply opacity-0;
+      @apply max-h-0;
+    }
+    #toggle:checked ~ ul {
+      @apply visible;
+      @apply opacity-100;
+      @apply max-h-max;
+    }
+
+    .toggle-icon:before {
+      content: "▾";
+    }
+    #toggle:checked ~ label h3 .toggle-icon:before {
+      content: "▴";
+    }
+  }
+
   .recipe {
     counter-reset: step;
-    @apply px-4;
-    @apply lg:px-0;
-    
+ 
     h3 {
       @apply flex;
       @apply items-center;
       @apply gap-1;
+      print-color-adjust: exact !important;
 
       &::before {
         content: '';
@@ -46,6 +65,7 @@
         @apply max-w-3;
         @apply h-px;
         @apply bg-black;
+        print-color-adjust: exact !important;
       }
 
       &::after {
@@ -53,6 +73,7 @@
         @apply flex-1;
         @apply h-px;
         @apply bg-black;
+        print-color-adjust: exact !important;
       }
     }
 
@@ -118,8 +139,8 @@
 
     ul + p {
       @apply lg:-mt-6;
-      @apply lg:block;
       @apply inline;
+      @apply lg:block;
     }
   }
 }

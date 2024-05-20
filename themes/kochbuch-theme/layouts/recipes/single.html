@@ -1,7 +1,29 @@
 {{ define "main" }}
   <h1 class="text-7xl my-4 px-4 lg:p-0">{{ .Title }}</h1>
 
-  <div class="recipe hyphens-auto">
+  {{ $ingredients := strings.Split .RawContent "\n" }}
+  <div class="ingredients px-4 lg:px-0">
+    <input id="toggle" type="checkbox" class="hidden" />
+    <label class="cursor-pointer" for="toggle">
+      <h3 class="hover:bg-amber-200 -mx-1 print:mx-0 px-1 print:px-0 rounded
+      transition-colors duration-300 w-fit">
+        Zutaten
+        <span class="px-1 toggle-icon print:invisible" /></span>
+      </h3>
+    </label>
+
+    <ul class="transition-opacity">
+    {{ range $ingredients }}
+      {{- if or (hasPrefix . "- ") (hasPrefix . "* ") -}}
+        <li class="list-disc ml-4">
+          {{ . | strings.TrimLeft "-* " }}
+        </li>
+      {{- end -}}
+    {{ end }}
+    </ul>
+  </div>
+
+  <div class="recipe hyphens-auto px-4 lg:px-0">
     {{ .Content }}
   </div>
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
