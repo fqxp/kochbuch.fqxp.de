@@ -135,6 +135,8 @@
       @apply mt-2;
       @apply p-0;
       @apply leading-6;
+      @apply inline;
+      @apply lg:block;
     }
 
     ul + p {
