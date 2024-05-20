@@ -33,13 +33,17 @@
   .ingredients {
     ul {
       @apply invisible;
+      @apply print:visible;
       @apply opacity-0;
+      @apply print:opacity-100;
       @apply max-h-0;
+      @apply print:max-h-max;
     }
     #toggle:checked ~ ul {
       @apply visible;
       @apply opacity-100;
       @apply max-h-max;
+      @apply mb-6;
     }
 
     .toggle-icon:before {
@@ -53,7 +57,9 @@
   .recipe {
     counter-reset: step;
  
-    h3 {
+    h2,h3 {
+      @apply text-2xl;
+      @apply mt-8;
       @apply flex;
       @apply items-center;
       @apply gap-1;
@@ -86,13 +92,14 @@
     }
 
     ol li {
-      @apply indent-6;
       counter-increment: step;
 
+      p {
+        @apply inline;
+      }
+
       &:before {
-        @apply absolute;
-        @apply w-4;
-        @apply -ml-12;
+        @apply mr-2;
         @apply font-bold;
         content: counter(step) ". ";
       }
@@ -101,14 +108,20 @@
     ul {
       @apply m-0;
       @apply lg:-ml-64;
+      @apply print:-ml-64;
       @apply p-0;
       @apply lg:pr-2;
+      @apply print:pr-2;
       @apply list-none;
       @apply lg:max-w-64;
+      @apply print:max-w-64;
       @apply lg:text-right;
+      @apply print:text-right;
       @apply leading-6;
       @apply inline;
       @apply lg:block;
+      @apply break-inside-avoid;
+      @apply print:block;
 
       li {
         @apply font-sans;
@@ -119,6 +132,7 @@
         @apply leading-6;
         @apply inline;
         @apply lg:list-item;
+        @apply print:list-item;
 
         &:not(:last-of-type):after {
           content: ", ";
@@ -137,12 +151,16 @@
       @apply leading-6;
       @apply inline;
       @apply lg:block;
+      @apply break-inside-avoid;
+      @apply print:block;
     }
 
     ul + p {
       @apply lg:-mt-6;
+      @apply print:-mt-6;
       @apply inline;
       @apply lg:block;
+      @apply print:block;
     }
   }
 }
