@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://kochbuch.fqxp.de/'
+languageCode = 'de-de'
+title = 'Franks Rezepte'
 
 [[menus.main]]
 name = 'Home'
@@ -10,6 +10,11 @@ weight = 10
 [[menus.main]]
 name = 'Posts'
 pageRef = '/posts'
+weight = 20
+
+[[menus.main]]
+name = 'Rezepte'
+pageRef = '/recipes'
 weight = 20
 
 [[menus.main]]
